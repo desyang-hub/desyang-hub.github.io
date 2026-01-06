@@ -16,7 +16,7 @@ timezone: Asia/Nanchang
 
 title: desyang # the main title
 
-tagline: Learn note-hub # it will display as the subtitle
+tagline: 程序人生，贵在坚持，重在理解。 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
