@@ -1,5 +1,6 @@
 docker run --rm \
   -v "$PWD:/srv/jekyll" \
   -p 4000:4000 \
-  -it ghcr.io/actions/jekyll-build-pages:latest \
+  -e LANG=C.UTF-8 \
+  -it jekyll/jekyll:latest \
   jekyll serve --watch --force_polling
