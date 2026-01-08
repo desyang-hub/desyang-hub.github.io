@@ -1,7 +1,7 @@
 ---
 title: 如何在 GitHub 上使用 Jekyll 搭建个人网站
 date: 2026-01-06 19:00:00 +0800
-categories: [Jekyll, GitHub Pages, 个人博客, 静态网站]
+categories: [blog, talk]
 tags: [tech]     # TAG names should always be lowercase
 ---
 
