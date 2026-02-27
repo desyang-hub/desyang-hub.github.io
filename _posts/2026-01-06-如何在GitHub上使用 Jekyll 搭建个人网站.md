@@ -1,8 +1,8 @@
 ---
 title: 如何在 GitHub 上使用 Jekyll 搭建个人网站
 date: 2026-01-06 19:00:00 +0800
-categories: [blog, talk]
-tags: [tech]     # TAG names should always be lowercase
+categories: [misc]
+tags: [Jekyll]     # TAG names should always be lowercase
 ---
 
 在当今数字时代，拥有一个属于自己的个人网站不仅是展示技术能力的方式，也是记录思考、分享知识的绝佳平台。而 **Jekyll + GitHub Pages** 的组合，正是零成本、高效率搭建静态个人网站的黄金搭档。本文将手把手教你如何从零开始，在 GitHub 上部署一个基于 Jekyll 的个人网站。
