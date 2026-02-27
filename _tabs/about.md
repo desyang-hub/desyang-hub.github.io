@@ -3,7 +3,6 @@
 icon: fas fa-user-circle
 order: 4
 description: 探索我的技术旅程、技能栈与联系方式
-title: 关于我
 ---
 
 <div class="profile-container" markdown="1">
@@ -41,12 +40,15 @@ title: 关于我
 
 无论是技术交流、项目合作还是单纯想交个朋友，都欢迎随时联系我！
 
-<div class="contact-buttons" markdown="1">
-  <a href="mailto:desyang@qq.com" target="_blank" class="contact-btn">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=black" alt="Email">
+<div class="contact-buttons">
+  <!-- Email 按钮：链接已修复，图片文字已添加 -->
+  <a href="mailto:desyang@qq.com" target="_blank" class="contact-btn-wrapper">
+    <img src="https://img.shields.io/badge/Email-desyang@qq.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
   </a>
-  <a href="https://github.com/desyang-hub" target="_blank" class="contact-btn">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  
+  <!-- GitHub 按钮：链接已修复，图片文字已添加 -->
+  <a href="https://github.com/desyang-hub" target="_blank" class="contact-btn-wrapper">
+    <img src="https://img.shields.io/badge/GitHub-@desyang--hub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
 </div>
 
@@ -111,35 +113,47 @@ p.lead {
   margin-top: 2rem;
 }
 
-.contact-btn {
+/* 包装器：确保点击区域正确 */
+.contact-btn-wrapper {
   display: inline-block;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none !important;
-  border-radius: 4px;
+  text-decoration: none !important; /* 强制去除下划线 */
+  border-radius: 6px;
+  line-height: 0; /* 消除图片底部常见的微小空隙 */
+  cursor: pointer;
 }
 
-.contact-btn:hover {
+/* 关键：确保图片和链接本身都能响应点击 */
+.contact-btn-wrapper img {
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: filter 0.2s ease;
+  /* 防止某些主题给图片添加奇怪的指针样式 */
+  pointer-events: auto; 
+}
+
+/* 悬停效果：上浮 + 阴影加深 */
+.contact-btn-wrapper:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-.contact-btn img {
-  height: auto;
-  max-width: 100%;
-  display: block;
+.contact-btn-wrapper:hover img {
+  filter: brightness(1.05); /* 稍微变亮 */
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .contact-btn-wrapper img {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  }
+  .contact-btn-wrapper:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+  }
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@media (prefers-color-scheme: dark) {
-  .profile-header {
-    background: var(--card-bg, #212529);
-  }
-  p.lead {
-    color: var(--text-color, #e0e0e0);
-  }
 }
 </style>
