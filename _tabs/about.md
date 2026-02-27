@@ -59,7 +59,13 @@ title: 关于我
 }
 
 .profile-header {
-  text-align: center;
+  /* 关键：启用 Flex 布局 */
+  display: flex;
+  flex-direction: column; /* 子元素垂直排列 */
+  align-items: center;    /* 水平居中 (Cross Axis) */
+  justify-content: center;/* 垂直居中 (Main Axis) - 可选，看你是否需要 */
+  
+  text-align: center;     /* 兜底：让文字内容也居中 */
   margin-bottom: 2rem;
   padding: 2rem 1rem;
   background: var(--card-bg, #f8f9fa);
@@ -68,7 +74,6 @@ title: 关于我
 }
 
 .profile-img {
-  text-align: center;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -76,7 +81,10 @@ title: 关于我
   border: 4px solid var(--primary-color, #2b85e4);
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
-  display: inline-block;
+  
+  /* 关键：确保图片作为块级元素处理，避免底部留白 */
+  display: block; 
+  /* 在 Flex 容器下，align-items: center 已经生效，这里不需要 margin: 0 auto */
 }
 
 .profile-img:hover {

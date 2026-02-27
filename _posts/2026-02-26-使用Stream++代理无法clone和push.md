@@ -1,6 +1,6 @@
 ---
 title: 解决校园网下 Git Push 失败：从 SSH 被拒到 HTTPS 证书信任的完整实践
-date: 2026-02-27 09:15:00 +0800
+date: 2026-02-26 09:15:00 +0800
 categories: [stream++, Git]
 tags: [github]
 ---
