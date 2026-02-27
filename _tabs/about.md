@@ -10,7 +10,9 @@ title: 关于我
 
 <!-- 头部简介区域 -->
 <div class="profile-header" markdown="1">
-  <img src="../assets/img/favicons/web-app-manifest-512x512.png" alt="Avatar" class="profile-img">
+  <img src="../assets/img/favicons/web-app-manifest-512x512.png" 
+     alt="Avatar" 
+     class="profile-img">
   <h1>👋 你好，我是 <span style="color: var(--primary-color);">desyang</span></h1>
   <p class="lead">🚀 <strong>全栈开发者 | 开源爱好者 | 终身学习者</strong></p>
   <p class="typing-text">致力于用代码改变世界</p>
@@ -66,6 +68,7 @@ title: 关于我
 }
 
 .profile-img {
+  text-align: center;
   width: 150px;
   height: 150px;
   border-radius: 50%;
